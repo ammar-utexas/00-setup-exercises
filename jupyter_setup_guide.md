@@ -220,6 +220,18 @@ notebook         : 7.x.x
 ...
 ```
 
+### Register the Virtual Environment as a Jupyter Kernel
+
+This step ensures Jupyter uses your virtual environment (with all installed packages) instead of the system Python:
+
+```bash
+python -m ipykernel install --user --name=<venv-name> --display-name="Python (data-science)"
+```
+
+Replace `<venv-name>` with your actual virtual environment name (e.g., `jupyter_env`).
+
+After running this command, you can select "Python (data-science)" as your kernel in Jupyter.
+
 ---
 
 ## 5. Running Jupyter
