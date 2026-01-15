@@ -37,3 +37,82 @@ Materials for setting up a Jupyter data science environment and exploring introd
 
 - Python 3.x
 - Libraries: pandas, numpy, matplotlib, seaborn, scipy, scikit-learn
+
+---
+
+## GitHub CLI Setup
+
+The GitHub CLI (`gh`) allows you to interact with GitHub from the command line — create repos, manage pull requests, and more.
+
+### Installation
+
+#### macOS
+```bash
+brew install gh
+```
+
+#### Windows
+```bash
+winget install --id GitHub.cli
+```
+Or download from [cli.github.com](https://cli.github.com/)
+
+#### Linux (Debian/Ubuntu)
+```bash
+sudo apt install gh
+```
+
+#### Linux (Fedora)
+```bash
+sudo dnf install gh
+```
+
+### Authentication
+
+After installing, authenticate with your GitHub account:
+
+```bash
+gh auth login
+```
+
+Follow the prompts:
+1. Select `GitHub.com`
+2. Choose your preferred protocol (HTTPS or SSH)
+3. Authenticate via web browser
+
+### Verify Setup
+
+```bash
+gh auth status
+```
+
+### Common Commands
+
+| Command | Description |
+|---------|-------------|
+| `gh repo create` | Create a new repository |
+| `gh repo clone owner/repo` | Clone a repository |
+| `gh pr create` | Create a pull request |
+| `gh pr list` | List pull requests |
+| `gh issue create` | Create an issue |
+| `gh issue list` | List issues |
+
+### Multiple Accounts
+
+To add another GitHub account:
+
+```bash
+gh auth login
+```
+
+To switch between accounts:
+
+```bash
+gh auth switch
+```
+
+To see all authenticated accounts:
+
+```bash
+gh auth status
+```
