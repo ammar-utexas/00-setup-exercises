@@ -6,6 +6,7 @@ Materials for setting up a Jupyter data science environment and exploring introd
 
 - [Files](#files)
 - [Getting Started](#getting-started)
+- [Starting Jupyter Server](#starting-jupyter-server)
 - [Requirements](#requirements)
 - [Git Installation](#git-installation)
 - [GitHub CLI Setup](#github-cli-setup)
@@ -44,6 +45,67 @@ Materials for setting up a Jupyter data science environment and exploring introd
    - macOS/Linux: `chmod +x setup_jupyter_macos_linux.sh && ./setup_jupyter_macos_linux.sh`
    - Windows: Double-click `setup_jupyter_windows.bat`
 3. Open `data_science_tour.ipynb` in Jupyter to explore the tutorial
+
+## Starting Jupyter Server
+
+After initial setup, use these commands to start Jupyter:
+
+### macOS/Linux
+
+```bash
+# Navigate to your project directory
+cd ~/data_science_projects
+
+# Activate virtual environment
+source jupyter_env/bin/activate
+
+# Start JupyterLab (recommended)
+jupyter lab
+
+# Or start classic Jupyter Notebook
+jupyter notebook
+```
+
+### Windows
+
+```cmd
+# Navigate to your project directory
+cd %USERPROFILE%\data_science_projects
+
+# Activate virtual environment
+jupyter_env\Scripts\activate
+
+# Start JupyterLab (recommended)
+jupyter lab
+
+# Or start classic Jupyter Notebook
+jupyter notebook
+```
+
+### Common Options
+
+```bash
+# Start on a specific port
+jupyter lab --port 8889
+
+# Start without opening browser
+jupyter lab --no-browser
+
+# Start in a specific directory
+jupyter lab --notebook-dir=/path/to/notebooks
+```
+
+### Stopping Jupyter
+
+Press `Ctrl + C` in the terminal, then type `y` to confirm.
+
+### Deactivating Virtual Environment
+
+When done, deactivate the virtual environment:
+
+```bash
+deactivate
+```
 
 ## Requirements
 
